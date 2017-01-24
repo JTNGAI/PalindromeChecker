@@ -16,7 +16,7 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  String cheese = noSpaces(word);
+/*  String cheese = noSpaces(word);
   cheese= noCapitals(cheese);
   cheese = onlyLetters(cheese);
 
@@ -26,7 +26,14 @@ if (cheese.equals(reverse(cheese)))
   else 
 
   return false;
-    
+ */
+  String cheese= new String();
+  for(int i=1; i<word.length()+1 ;i++)
+    cheese= cheese + word.substring(word.length()-i , word.length() -i +1);
+  if(cheese.equals(word))
+    return true;
+  return false; 
+  
 }
 
 public String reverse(String sWord){
